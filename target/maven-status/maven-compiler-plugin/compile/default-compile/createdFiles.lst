@@ -1,10 +1,14 @@
+com\pmfrtt\skyblock\Economy\EconomyFileManager.class
 com\pmfrtt\skyblock\Quests\Quest.class
 com\pmfrtt\skyblock\Quests\QuestRequirements.class
 com\pmfrtt\skyblock\Quests\QuestEventHandler$1.class
+com\pmfrtt\skyblock\Quests\QuestEventHandler$3.class
 com\pmfrtt\skyblock\Economy\EconomyCommands.class
 com\pmfrtt\skyblock\Economy\Economy.class
+com\pmfrtt\skyblock\Quests\QuestEventHandler$2.class
 com\pmfrtt\skyblock\Quests\Quests.class
 com\pmfrtt\skyblock\Skyblock.class
+com\pmfrtt\skyblock\SkyblockEventHandler.class
 com\pmfrtt\skyblock\Shop\ShopCommands.class
 com\pmfrtt\skyblock\Quests\QuestCommands.class
 com\pmfrtt\skyblock\Quests\QuestEventHandler.class

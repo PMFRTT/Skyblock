@@ -1,11 +1,11 @@
 package com.pmfrtt.skyblock.Quests;
 
-import core.CoreBungeeCordClient;
 import core.Utils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Quest {
@@ -13,17 +13,13 @@ public class Quest {
     public Material required;
     public int amountRequired;
 
-    public int submitted;
-
-    public Material reward;
-    public int amountReward;
+    public float amountReward;
 
     public boolean finished;
 
-    public Quest(Material required, int amountRequired, Material reward, int amountReward, boolean finished) {
+    public Quest(Material required, int amountRequired, float amountReward, boolean finished) {
         this.required = required;
         this.amountRequired = amountRequired;
-        this.reward = reward;
         this.amountReward = amountReward;
         this.finished = finished;
     }
@@ -37,22 +33,19 @@ public class Quest {
         Lore.add(Utils.colorize("&c-" + amountRequired + " " + Quests.getMaterialName(required)));
         if (amountRequired >= 128) {
             Lore.add(Utils.colorize("&c-" + amountRequired / 64 + " Stacks und " + amountRequired % 64 + " Items"));
-        }else if(amountRequired > 64){
+        } else if (amountRequired > 64) {
             Lore.add(Utils.colorize("&c-" + amountRequired / 64 + " Stack und " + amountRequired % 64 + " Items"));
-        }else{
-            Lore.add(Utils.colorize("&c-" + amountRequired % 64  + " Items"));
+        } else {
+            Lore.add(Utils.colorize("&c-" + amountRequired % 64 + " Items"));
         }
         Lore.add("");
-        Lore.add(Utils.colorize("&a+" + amountReward + " " + Quests.getMaterialName(reward)));
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        Lore.add(Utils.colorize("&a+" + decimalFormat.format(amountReward / 100) + "€"));
+        Lore.add(Utils.colorize("&a+" + decimalFormat.format(amountReward / amountRequired / 100) + "€ pro Item"));
         QuestItemMeta.setLore(Lore);
 
         QuestItem.setItemMeta(QuestItemMeta);
         return QuestItem;
     }
-
-    public static void submitItems(int amount) {
-
-    }
-
 
 }

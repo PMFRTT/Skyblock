@@ -6,14 +6,14 @@ import java.util.HashMap;
 
 public class Economy {
 
-    public static HashMap<Player, Integer> playerBalance = new HashMap<Player, Integer>();
+    public static HashMap<Player, Float> playerBalance = new HashMap<>();
 
-    public static void addMoney(Player player, int amount) {
+    public static void addMoney(Player player, float amount) {
         playerBalance.put(player, playerBalance.get(player) + amount);
     }
 
 
-    public static void deductMoney(Player player, int amount) {
+    public static void deductMoney(Player player, float amount) {
         playerBalance.put(player, playerBalance.get(player) - amount);
     }
 
