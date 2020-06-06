@@ -33,6 +33,7 @@ public final class Skyblock extends JavaPlugin {
         economyFileManager.readFromFile();
         getCommand("quest").setExecutor(questCommands);
         getCommand("balance").setExecutor(economyCommands);
+        getCommand("money").setExecutor(economyCommands);
     }
 
     @Override

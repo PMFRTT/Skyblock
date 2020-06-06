@@ -238,7 +238,7 @@ public class QuestInventory {
             }
             for (int i = 0; i < 4; i++) {
                 int index = 2 * i + 19;
-                questInventoryEasy.setItem(index, cancelQuest);
+                questInventoryMedium.setItem(index, cancelQuest);
             }
         } else if (questInventoryHard.equals(inv)) {
             if (Quests.questsHard.isEmpty()) {
@@ -272,7 +272,7 @@ public class QuestInventory {
             }
             for (int i = 0; i < 4; i++) {
                 int index = 2 * i + 19;
-                questInventoryEasy.setItem(index, cancelQuest);
+                questInventoryHard.setItem(index, cancelQuest);
             }
         }
     }

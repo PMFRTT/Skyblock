@@ -8,3 +8,5 @@ commands:
     aliases: [q]
   balance:
     aliases: [bal]
+  money:
+    alieses: [m, cash]
