@@ -22,7 +22,7 @@ public class QuestRequirements {
     private Requirement sapling = new Requirement(Material.OAK_SAPLING, 2, 4, 4, 6);
     private Requirement apple = new Requirement(Material.APPLE, 1, 4, 8, 12);
     private Requirement stick = new Requirement(Material.STICK, 8, 16, 2, 4);
-    private Requirement bread = new Requirement(Material.BREAD, 8, 16, 8, 16);
+    private Requirement bread = new Requirement(Material.BREAD, 8, 16, 12, 16);
     //private static Requirement cobblestone = new Requirement(Material.COBBLESTONE, 16, 32);
     //private static Requirement rottenFlesh = new Requirement(Material.ROTTEN_FLESH, 4, 8);
     //private static Requirement bone = new Requirement(Material.BONE, 4, 8);
@@ -41,8 +41,10 @@ public class QuestRequirements {
             fermentedSpiderEye
     };
 
+    private Requirement diamond = new Requirement(Material.DIAMOND, 2,3,150,100000);
+
     public Requirement[] hardRequirements = {
-            carrot, potato, wheat, log, cobblestone, rottenFlesh, bone, string, sapling, apple, stick, bread
+diamond
     };
 
     public Requirement getRequirement(String difficulty) {

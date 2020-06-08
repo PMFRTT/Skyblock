@@ -2,6 +2,7 @@ Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\QuestInventory.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\Requirement.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Skyblock.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\QuestRequirements.java
+Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\Sell.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\ShopCommands.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\Quests.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Economy\Economy.java
@@ -11,5 +12,9 @@ Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\ShopInventory.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\QuestCommands.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\QuestRewards.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\QuestEventHandler.java
+Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\sellPriceInventory.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Economy\EconomyFileManager.java
+Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\SalePriceMap.java
 Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Quests\Quest.java
+Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\SellInventory.java
+Z:\Bukkit\Skyblock\src\main\java\com\pmfrtt\skyblock\Shop\ShopEventHandler.java

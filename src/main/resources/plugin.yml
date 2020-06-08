@@ -9,4 +9,5 @@ commands:
   balance:
     aliases: [bal]
   money:
-    alieses: [m, cash]
+    aliases: [m, cash]
+  sell:
