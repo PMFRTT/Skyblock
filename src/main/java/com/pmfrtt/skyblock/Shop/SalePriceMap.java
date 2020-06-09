@@ -3,6 +3,7 @@ package com.pmfrtt.skyblock.Shop;
 import org.bukkit.Material;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class SalePriceMap {
 
@@ -63,8 +64,24 @@ public class SalePriceMap {
             put(Material.WHEAT, 30f);
             put(Material.POTATO, 30f);
             put(Material.BREAD, 100f);
-
+            put(Material.OAK_SAPLING, 5f);
+            put(Material.ACACIA_SAPLING, 5f);
+            put(Material.BIRCH_SAPLING, 5f);
+            put(Material.DARK_OAK_SAPLING, 5f);
+            put(Material.JUNGLE_SAPLING, 5f);
         }
 
     };
+
+
+    public static HashMap<Integer, Material> returnSaleMapWithIndex() {
+
+        HashMap<Integer, Material> temp = new HashMap<>();
+        int i = 0;
+        for (Map.Entry<Material, Float> entry : salePriceMap.entrySet()) {
+            temp.put(i, entry.getKey());
+            i++;
+        }
+        return temp;
+    }
 }

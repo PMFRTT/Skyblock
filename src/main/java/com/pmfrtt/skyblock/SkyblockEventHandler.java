@@ -2,13 +2,14 @@ package com.pmfrtt.skyblock;
 
 import com.pmfrtt.skyblock.Economy.Economy;
 import org.bukkit.*;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockFormEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.Damageable;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Random;
 
@@ -82,14 +83,24 @@ public class SkyblockEventHandler implements Listener {
 
     @EventHandler
     private void playerInteraction(PlayerInteractEvent e) {
-        if (e.getItem().getType().equals(Material.POTION)) {
-            if(e.getClickedBlock().getType().equals(Material.SAND)){
-                e.getClickedBlock().setType(Material.CLAY);
-                e.getPlayer().getItemInHand().setType(Material.GLASS_BOTTLE);
-                e.setCancelled(true);
+        if (e.getItem() != null) {
+            if (e.getItem().getType().equals(Material.POTION)) {
+                if (e.getClickedBlock().getType().equals(Material.SAND)) {
+                    if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                        e.getClickedBlock().setType(Material.CLAY);
+                        e.getPlayer().getItemInHand().setType(Material.GLASS_BOTTLE);
+                        e.setCancelled(true);
+                    }
+                }
+            }
+            if (e.getItem().getType().equals(Material.IRON_PICKAXE)) {
+                if (e.getClickedBlock().getType().equals(Material.COBBLESTONE)) {
+                    if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                        e.getClickedBlock().setType(Material.GRAVEL);
+                        e.setCancelled(true);
+                    }
+                }
             }
         }
     }
-
-
 }

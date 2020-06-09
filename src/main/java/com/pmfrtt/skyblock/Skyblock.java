@@ -6,13 +6,10 @@ import com.pmfrtt.skyblock.Quests.QuestCommands;
 import com.pmfrtt.skyblock.Quests.QuestEventHandler;
 import com.pmfrtt.skyblock.Shop.ShopCommands;
 import com.pmfrtt.skyblock.Shop.ShopEventHandler;
-import core.CoreMain;
+import core.core.CoreMain;
 import org.bukkit.plugin.java.JavaPlugin;
 
-//TODO
-// - Test multiple world for one server
-// - add Shop interface
-// -
+
 
 public final class Skyblock extends JavaPlugin {
 

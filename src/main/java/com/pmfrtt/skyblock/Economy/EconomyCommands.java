@@ -35,7 +35,7 @@ public class EconomyCommands implements CommandExecutor {
             }
             DecimalFormat decimalFormat = new DecimalFormat("0.00");
             String numberAsString = decimalFormat.format(Economy.playerBalance.get(player));
-            player.sendMessage(Utils.colorize("Du hast &a" + numberAsString + "&f€"));
+            player.sendMessage(Utils.getPrefix("Economy") + Utils.colorize("Du hast &a" + numberAsString + "&f€"));
             main.economyFileManager.writeToFile(player, Economy.playerBalance.get(player));
         } else if (command.getLabel().equals("money")) {
             if (args.length == 3) {

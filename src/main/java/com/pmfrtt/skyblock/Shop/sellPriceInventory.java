@@ -15,13 +15,30 @@ import java.util.Map;
 public class sellPriceInventory {
 
     public static Inventory sellPriceInventory = Bukkit.createInventory(null, 54, Utils.colorize("&dPreisliste"));
+    public static int page = 0;
 
-    public static Inventory getSellPriceInventory(){
+    public static Inventory getSellPriceInventory() {
 
         int i = 0;
-        for(Map.Entry<Material, Float> entry : SalePriceMap.salePriceMap.entrySet()){
-            if(i < 53){
+        for (Map.Entry<Material, Float> entry : SalePriceMap.salePriceMap.entrySet()) {
+            if (page == 1) {
+                if (i < 53) {
 
+                    ItemStack temp = new ItemStack(entry.getKey());
+                    ItemMeta tempMeta = temp.getItemMeta();
+                    List<String> lore = new ArrayList<String>();
+                    DecimalFormat decimalFormat = new DecimalFormat("0.00");
+                    lore.add(Utils.colorize("&6" + decimalFormat.format(entry.getValue() / 100) + "€"));
+                    tempMeta.setLore(lore);
+                    temp.setItemMeta(tempMeta);
+
+                    sellPriceInventory.setItem(i, temp);
+
+                    i++;
+                }else {
+                    page++;
+                }
+            }else if (page == 2){
                 ItemStack temp = new ItemStack(entry.getKey());
                 ItemMeta tempMeta = temp.getItemMeta();
                 List<String> lore = new ArrayList<String>();
@@ -33,20 +50,9 @@ public class sellPriceInventory {
                 sellPriceInventory.setItem(i, temp);
 
 
-
                 i++;
             }
         }
-
-
-
-
-
-
-
-
-
-
 
 
         return sellPriceInventory;
